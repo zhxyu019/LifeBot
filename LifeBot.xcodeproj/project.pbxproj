@@ -11,6 +11,10 @@
 		FEA1559C2A9CD48A00912E5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1559B2A9CD48A00912E5F /* ContentView.swift */; };
 		FEA1559E2A9CD48D00912E5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA1559D2A9CD48D00912E5F /* Assets.xcassets */; };
 		FEA155A12A9CD48D00912E5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA155A02A9CD48D00912E5F /* Preview Assets.xcassets */; };
+		FEA155A82A9CD58D00912E5F /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA155A72A9CD58D00912E5F /* ChatViewModel.swift */; };
+		FEA155AA2A9CD77700912E5F /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA155A92A9CD77700912E5F /* OpenAIService.swift */; };
+		FEA155AD2A9CD90600912E5F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FEA155AC2A9CD90600912E5F /* Alamofire */; };
+		FEA155AF2A9CDA4C00912E5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA155AE2A9CDA4C00912E5F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		FEA1559B2A9CD48A00912E5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FEA1559D2A9CD48D00912E5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEA155A02A9CD48D00912E5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FEA155A72A9CD58D00912E5F /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		FEA155A92A9CD77700912E5F /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		FEA155AE2A9CDA4C00912E5F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA155AD2A9CD90600912E5F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,9 @@
 			children = (
 				FEA155992A9CD48A00912E5F /* LifeBotApp.swift */,
 				FEA1559B2A9CD48A00912E5F /* ContentView.swift */,
+				FEA155A72A9CD58D00912E5F /* ChatViewModel.swift */,
+				FEA155A92A9CD77700912E5F /* OpenAIService.swift */,
+				FEA155AE2A9CDA4C00912E5F /* Constants.swift */,
 				FEA1559D2A9CD48D00912E5F /* Assets.xcassets */,
 				FEA1559F2A9CD48D00912E5F /* Preview Content */,
 			);
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = LifeBot;
+			packageProductDependencies = (
+				FEA155AC2A9CD90600912E5F /* Alamofire */,
+			);
 			productName = LifeBot;
 			productReference = FEA155962A9CD48A00912E5F /* LifeBot.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = FEA1558D2A9CD48A00912E5F;
+			packageReferences = (
+				FEA155AB2A9CD90600912E5F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FEA155972A9CD48A00912E5F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA155AF2A9CDA4C00912E5F /* Constants.swift in Sources */,
 				FEA1559C2A9CD48A00912E5F /* ContentView.swift in Sources */,
+				FEA155A82A9CD58D00912E5F /* ChatViewModel.swift in Sources */,
 				FEA1559A2A9CD48A00912E5F /* LifeBotApp.swift in Sources */,
+				FEA155AA2A9CD77700912E5F /* OpenAIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FEA155AB2A9CD90600912E5F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEA155AC2A9CD90600912E5F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEA155AB2A9CD90600912E5F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEA1558E2A9CD48A00912E5F /* Project object */;
 }
