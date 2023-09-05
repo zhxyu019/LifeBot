@@ -18,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15ED5C222AA6EA7D00E22D2C /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		15ED5C232AA6EAD900E22D2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FEA155962A9CD48A00912E5F /* LifeBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA155992A9CD48A00912E5F /* LifeBotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeBotApp.swift; sourceTree = "<group>"; };
 		FEA1559B2A9CD48A00912E5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		FEA1558D2A9CD48A00912E5F = {
 			isa = PBXGroup;
 			children = (
+				15ED5C222AA6EA7D00E22D2C /* Secrets.xcconfig */,
 				FEA155982A9CD48A00912E5F /* LifeBot */,
 				FEA155972A9CD48A00912E5F /* Products */,
 			);
@@ -59,6 +62,7 @@
 		FEA155982A9CD48A00912E5F /* LifeBot */ = {
 			isa = PBXGroup;
 			children = (
+				15ED5C232AA6EAD900E22D2C /* Info.plist */,
 				FEA155992A9CD48A00912E5F /* LifeBotApp.swift */,
 				FEA1559B2A9CD48A00912E5F /* ContentView.swift */,
 				FEA155A72A9CD58D00912E5F /* ChatViewModel.swift */,
@@ -167,6 +171,7 @@
 /* Begin XCBuildConfiguration section */
 		FEA155A22A9CD48D00912E5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15ED5C222AA6EA7D00E22D2C /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -227,6 +232,7 @@
 		};
 		FEA155A32A9CD48D00912E5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15ED5C222AA6EA7D00E22D2C /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -290,6 +296,7 @@
 				DEVELOPMENT_TEAM = FFH396A6Y4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifeBot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +326,7 @@
 				DEVELOPMENT_TEAM = FFH396A6Y4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifeBot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

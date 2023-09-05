@@ -16,19 +16,18 @@ class OpenAISerivce {
         
         let openAIMessages = messages.map({OpenAIChatMessage(role: $0.role, content: $0.content)})
         
-        let body = OpenAIChatBody(model: "gpt-3.5-turbo", messsages: openAIMessages)
+        let body = OpenAIChatBody(model: "gpt-3.5-turbo", messages: openAIMessages)
         
         let header: HTTPHeaders = [
             "Authorization": "Bearer \(Constants.openAIApiKey)"
         ]
-        
         return try? await AF.request(endPointURL, method: .post, parameters: body, encoder: .json, headers: header).serializingDecodable(OpenAIChatResponse.self).value
     }
 }
 
 struct OpenAIChatBody: Encodable {
     let model: String
-    let messsages: [OpenAIChatMessage]
+    let messages: [OpenAIChatMessage]
 }
 
 struct OpenAIChatMessage: Codable {
